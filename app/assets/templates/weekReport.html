@@ -1,0 +1,24 @@
+<div>
+    <div class="row">
+        <div class="mb-3 col-sm-4">
+            <datepicker date-format="yyyy-MM-dd" date-min-limit="2016-07-01" date-max-limit="2016-07-07">
+                <input type="text" ng-model="search.startDay" class="form-control" placeholder="Select a Day" aria-label="Recipient's username"
+                    aria-describedby="basic-addon2">
+            </datepicker>
+        </div>
+        <div class="mb-3 col-sm-4">
+            <datepicker date-format="yyyy-MM-dd" date-min-limit="2016-07-01" date-max-limit="2016-07-07">
+                <input type="text" ng-model="search.endDay" class="form-control" placeholder="Select a Day" aria-label="Recipient's username"
+                    aria-describedby="basic-addon2">
+            </datepicker>
+        </div>
+        <div class="mb-3 col-sm-4">
+            <select ng-options="item for item in ['day','aggregate']" ng-model="search.aggType"></select>
+        </div>
+        <div class="col-sm-4">
+            <button ng-click="submitReport()" class="btn btn-outline-secondary" type="button">Show</button>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <highchart id="chart1" config="chartConfig"></highchart>
+</div>

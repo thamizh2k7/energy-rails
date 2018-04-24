@@ -1,0 +1,29 @@
+<!doctype html>
+<html ng-app="energyApp">
+<head>
+<%= csrf_meta_tags %>
+<%= csp_meta_tag %>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>AutoGrid Assessment</title>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <base href="/">
+</head>
+<body>
+    <header class="nav-header">
+        <a href="fdsafdsa">Energy Report</a>
+    </header>
+    <div class="container">
+        <div class="side-nav">
+            <ul class="list-unstyled">
+                <li><a href="dayReport">DayWise Report</a></li>
+                <li><a href="weekReport">Weekly Report</a></li>
+            </ul>
+        </div>
+        <div class="common-wrapper">
+        <%= yield %>
+        </div>
+    </div>
+    <%= javascript_include_tag 'application'%>
+  </body>
+
+</html>
